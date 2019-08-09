@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script>$(document)
+        .mousemove(function(e) {
+          $('.cursor')
+            .eq(0)
+            .css({
+              left: e.pageX,
+              top: e.pageY
+            });
+          setTimeout(function() {
+            $('.cursor')
+              .eq(1)
+              .css({
+                left: e.pageX,
+                top: e.pageY
+              });
+          }, 100);
+        })
+
+</script>
+<style>* {
+        cursor: none;
+      }
+      .cursor {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border:1px solid grey;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 99999;
+        pointer-events:none;
+      }
+  
+     
+        
+</style>
+
+
+</head>
+<body>
+        <div class='cursor'></div>
+        <div class='cursor'></div>
+        <h1>Custom cursor</h1>
+        <a href="https://www.google.com">A link </a>
+</body>
+</html>

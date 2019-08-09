@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Bootstrap Touch slider</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all">
+
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+        <link href="bootstrap-touch-slider.css" rel="stylesheet" media="all">
+        <style>
+        .circle-animate{
+            border-radius: 50%;
+            border:1px solid red;
+            background: orange;
+        
+        }
+        body{
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1581299/profile/profile-80.jpg), auto;
+        }
+
+        
+@keyframes move {
+  100% {
+    margin-right:53%;margin-top:6%
+  }
+}
+@keyframes move1 {
+  100% {
+    margin-right:53%;margin-top:6%
+  }
+}
+   
+@keyframes move2 {
+  100% {
+    margin-right:53%;margin-top:6%
+  }
+}
+   
+@keyframes move3 {
+  100% {
+    margin-right:53%;margin-top:6%
+  }
+}
+   
+        </style>
+
+    </head>
+
+    <body>
+
+
+        <!--  
+        If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
+        Slide effect: slide, fade
+        Text Align: slide_style_center, slide_style_left, slide_style_right
+        Add animation in text: https://daneden.github.io/animate.css/
+        
+        
+        --><div>dd</div>
+
+        <div style="height:40%" width="40%" id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="2700" >
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper For Slides -->
+            <div  class="carousel-inner" role="listbox">
+
+                <!-- Third Slide -->
+                <div class="item active">
+
+                    <!-- Slide Background -->
+                    <img src="1gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+
+                    <div class="container">
+                        <div class="row">
+                                <div style="margin-right:13%;margin-top:-61%;height:50%;width:35%;color:black;border-radius:50%;background-color: white;  animation: move 3s ease 1;
+                                animation-fill-mode:forwards;" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                            
+                                        <br/><br/>
+                                         <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                                         <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                                         <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                                        <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                                   
+                                 </div>
+                            <!-- Slide Text Layer 
+                            <div class="slide-text  slide_style_left">
+                                <h1 data-animation="animated zoomInRight">Bootstrap Carousel</h1>
+                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+                                <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                                <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+                <!-- Second Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="2gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <iframe style="width:100%;" class="slide-image" src="https://player.vimeo.com/video/347307276?background=1&autoplay=1&loop=1&byline=0&title=0"></iframe>
+ 
+                    <div class="bs-slider-overlay"></div>
+                    <!-- Slide Text Layer -->
+                   
+                    <div style="margin-right:13%;margin-top:-61%;height:40%;width:35%;color:black;border-radius:50%;background-color: white; animation: move1 3s ease 1;
+                    animation-fill-mode:forwards;animation-delay:3s" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                            
+                       <br/><br/>
+                        <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                        <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                        <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                       <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                  
+                </div>
+                </div>
+                <!-- End of Slide -->
+
+                <!-- Third Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="traffic.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+                    <div style=" animation: move2 3s ease 1;
+                    animation-fill-mode:forwards;animation-delay:6s;margin-right:13%;margin-top:-61%;height:50%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                            
+                            <br/><br/>
+                             <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                             <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                             <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                            <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                       
+                     </div>
+                    <!-- Slide Text Layer 
+                    <div class="slide-text slide_style_right">
+                        <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
+                        <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                        <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                        <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                    </div>-->
+                </div>
+                <div class="item">
+
+                        <!-- Slide Background -->
+                        <img src="4gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <div class="bs-slider-overlay"></div>
+                        <div style=" animation: move3 3s ease 1;
+                        animation-fill-mode:forwards;margin-right:13%;animation-delay:9s;margin-top:-61%;height:50%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                                
+                                <br/><br/>
+                                 <h3 style="color:black" data-animation="animated flipInX">The  disruptive technology that will hit our industry</h3>
+                                 <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                                 <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                                <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                           
+                         </div>
+                        <!-- Slide Text Layer 
+                        <div class="slide-text slide_style_right">
+                            <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
+                            <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                            <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                            <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                        </div>-->
+                    </div>
+                <!-- End of Slide -->
+
+
+            </div><!-- End of Wrapper For Slides -->
+
+            <!-- Left Control -->
+            <a style="  -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(270deg); margin-left:6%;margin-top:10%;" class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <!-- Right Control -->
+            <a  style="  -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(270deg);float:left; margin-top:5%; margin-left:6% " class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div> <!-- End  bootstrap-touch-slider Slider -->
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+        
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main JS File -->
+        <script src="bootstrap-touch-slider.js"></script>
+        
+        <script type="text/javascript">
+            $('#bootstrap-touch-slider').bsTouchSlider();
+        </script>
+   </body>
+
+</html>
+
+<!-- End -->

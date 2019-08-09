@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+           
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous"></script>
+   
+            <script src="cursor.js"></script>
+
+</script>
+        <style>
+            .flex-container {
+        display: flex;
+        align-items: center; /* Use another value to see the result */
+        width: 100%;
+        min-height: 300px;
+        background-color:rgb(248, 248, 248);
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+      #future{
+        display: inline-block; 
+        position:relative; 
+        left:500px; 
+        padding-top:5px; 
+        font-size: 20px;
+      }
+      #textbox{
+        display: inline-block; 
+        position:relative; 
+        left:500px; 
+        padding-top:8px; 
+        
+      }
+
+.line1{ 
+        padding-top:100px;  
+        display:inline-flex;
+        border:none;
+        padding-left: 350px;
+        padding-right: 100px;
+        border-bottom:2px solid black;
+        width:100%;
+        background-color: rgb(248, 248, 248);
+}
+
+.line2{ 
+        padding-top:10px;  
+        display:initial;
+        border:none;
+        padding-left: 50px;
+        
+        border-bottom:1px solid grey;
+        width:80%;
+      
+}
+
+#line3{ 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding-top:10px;  
+        display:inline-flex;
+        border:none;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom:0.5px solid black;
+        width:50%;
+        background-color: white;
+}
+
+
+.w3-container,.w3-panel{
+  padding-top:30px;
+  padding-left: 60px;
+  }
+  
+/*
+
+.w3-blue,.w3-hover-blue:hover{color:#fff!important;
+background-color:#2196F3!important}
+*/
+
+.rowfoot_image {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columnfoots that sits next to each other */
+.columnfoot {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+#id{
+  padding-left: 0px;
+}
+
+.hoverit:hover{
+  color: red;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.columnfoot {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.rowfoot::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.module {
+  cursor: url('img21.png'), auto;	
+}
+
+* {
+                cursor: none;
+         }
+         
+         .cursor {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+pointer-events: none;
+}
+.new_image{
+    border:none;
+}
+.new_image:hover{
+    border: 1px solid grey;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+
+}
+        </style>
+    </head>
+    <body >
+        
+            <div class="flex-container">
+              <div  id="future" style="position: relative;"><h2><strong>What is the future of ... </strong> </h2></div>
+              <div>
+               <input type="text" value="" class="line1">
+                <img   style="margin-right:-110%;margin-top:-7%;" src="img14.png" height="55px" width="67px" >
+               
+              </div>
+            </div>
+
+            
+            </div>
+        <div class="rowfoot_image"> 
+                <div class="col-md-4">
+                  
+                <form class="w3-container">
+                    <p>
+                    <label style="font-size: 24px; padding-left: 5px;">Don't miss out on insights ...</label>
+                    <br>
+                    <input class="line2" type="text" placeholder="Email Address">
+                  </p>                    
+                </form>
+                <div class="g-recaptcha" data-sitekey="6Ld6_7EUAAAAACSOD-dCSDrzkzxrV0l3IE8Y7zZe" style="padding-left: 60px;" required></div>
+                <span id="captcha" style="color:red" required></span> <!-- this will show captcha errors --><br>
+               <p style="padding-left: 60px;"><input type="checkbox"  required>WSP may contact me via email</input></p>
+               <p style="padding-left: 60px;"><button class="button button4" id="line3" >Subscribe</button>
+                <img   style="margin-right:10%; " src="img20.png" height="20px" width="20px">
+              </p> 
+              </p>
+              </div>
+                <div class="col-sm-2"  style="padding-top: 30px;">
+                            <p style="font-size: 24px;">Sectors</p>
+                            <p class="hoverit">Technology</p>
+                            <p class="hoverit">Future Thinking</p>
+                </div>
+                <div class="col-sm-4" id="support" style="padding-top: 30px;"> 
+                    <p style="font-size: 24px;">Support</p>
+                    <p class="hoverit">Privacy Policy</p>
+                    <p class="hoverit">Terms & Conditions</p>
+                </div>
+
+                <div class="col-sm-2"  style="padding-top: 150px;">
+                  
+                  <div class="rowfoot">
+                    <div class="col-sm-4"><img src="img16.png" height="20px" width="20px" class="new_image"></div>
+                    <div class="col-sm-4"><img src="img17.png" height="20px" width="20px" class="new_image"></div>
+                    <div class="col-sm-4"><img src="img18.png" height="20px" width="20px" class="new_image"></div>
+                    <p class="module"></p>
+                </div>
+                </div>  
+        </div>
+        <?php 
+        include 'index.php';
+        ?>
+       
+    </body>
+    
+    </html>

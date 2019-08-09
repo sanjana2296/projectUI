@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Bootstrap Touch slider</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all">
+
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+        <link href="bootstrap-touch-slider.css" rel="stylesheet" media="all">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<style>
+
+</style>
+        <style>
+                .flex-container {
+            display: flex;
+            align-items: center; /* Use another value to see the result */
+            width: 100%;
+            min-height: 300px;
+            background-color:rgb(248, 248, 248);
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+          }
+    
+          #future{
+            display: inline-block; 
+            position:relative; 
+            left:500px; 
+            padding-top:5px; 
+            font-size: 20px;
+          }
+          #textbox{
+            display: inline-block; 
+            position:relative; 
+            left:500px; 
+            padding-top:8px; 
+            
+          }
+    
+    .line1{ 
+            padding-top:100px;  
+            display:inline-flex;
+            border:none;
+            padding-left: 350px;
+            padding-right: 100px;
+            border-bottom:2px solid black;
+            width:100%;
+            background-color: rgb(248, 248, 248);
+    }
+    
+    .line2{ 
+            padding-top:10px;  
+            display:initial;
+            border:none;
+            padding-left: 50px;
+            
+            border-bottom:1px solid grey;
+            width:80%;
+          
+    }
+    
+    #line3{ 
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding-top:10px;  
+            display:inline-flex;
+            border:none;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom:0.5px solid black;
+            width:50%;
+            background-color: white;
+    }
+    
+    
+    .w3-container,.w3-panel{
+      padding-top:30px;
+      padding-left: 60px;
+      }
+      
+    /*
+    
+    .w3-blue,.w3-hover-blue:hover{color:#fff!important;
+    background-color:#2196F3!important}
+    */
+    
+    .rowfoot_image {
+      display: -ms-flexbox; /* IE 10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE 10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create two equal columnfoots that sits next to each other */
+    .columnfoot {
+      -ms-flex: 50%; /* IE 10 */
+      flex: 50%;
+      padding: 0 4px;
+    }
+    
+    #id{
+      padding-left: 0px;
+    }
+    
+    .hoverit:hover{
+      color: red;
+    
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .columnfoot {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .rowfoot::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .button4 {
+      background-color: white;
+      color: black;
+      border: 2px solid #e7e7e7;
+    }
+    
+    .button4:hover {background-color: #e7e7e7;}
+    
+    .module {
+      cursor: url('img21.png'), auto;	
+    }
+    
+    * {
+                    cursor: none;
+             }
+             
+             .cursor {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 1px solid grey;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    }
+    .new_image{
+        border:none;
+    }
+    .new_image:hover{
+        border: 1px solid grey;
+        border-radius: 50%;
+        width:30px;
+        height:30px;
+    
+    }
+            </style>
+        <style>
+        .circle-animate{
+            border-radius: 50%;
+            border:1px solid red;
+            background: orange;
+        
+        }
+        /*body{
+            cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1581299/profile/profile-80.jpg), auto;
+        }*/
+
+        body{
+                    font-family: 'Styrene A';
+                    letter-spacing: 1.5px;
+
+                }
+            .header{
+                margin-top: 30px;
+
+                overflow: hidden;
+                height:100px;
+                padding: 30px 30px;
+
+               }
+                .logo{
+                    margin-top:-30px;
+                    margin-right:-35px;
+                   float:left;
+                   
+                   }
+
+
+            .header-right{
+                float: right;
+                align-items: center;
+                word-spacing: 1.5px;
+                
+             
+                margin-right: 40px;
+         
+            }
+            .logo img{
+                width:120px;
+                height:60px;
+                align-content: center;
+                margin-left: 190px;
+
+            }
+            .header a{
+                text-decoration: none;
+                color:black;
+                text-align: center;
+                font-size:20px;
+
+  padding: 12px;}
+  
+  .button{
+    background-color: white;
+      border:1px solid black;
+      height:15px;
+      width: 15px;
+      position: absolute;
+      margin-top:10px;
+      text-align: center;
+      text-decoration: none;
+   align-content: center;
+   margin-right:-5%;
+   border-radius: 50%;
+     
+  }
+  @keyframes anim{
+      0%{transform: translate(0px) scale(1.5) ;}
+      100%{
+          transform: translate(13px) scale(1.5);
+      }
+  }
+  /*@keyframes anim{
+      0%{left:0px;scale: 1.5;}
+      100%{left:15px;}
+  }*/
+  .set{
+      border-spacing: 1px;
+      display: inline;
+  }
+  
+  .button:hover::after{
+ /*   content: '\00bb';*/
+      color: black;
+     align-content: center;
+    transition-property: all;
+      }
+      
+  .button:hover {
+
+margin-right:-10%;
+      text-decoration: none;
+       animation: anim 0.3s linear;
+       animation-fill-mode: forwards;
+     /* content: '\00bb';*/
+      color: black;
+    animation-iteration-count: 1;
+      }
+      .button:hover .fa{
+display: block;
+
+      }
+
+      @keyframes anim1{
+      0%{transform: translate(0px) scale(1.5) ;}
+      100%{
+          transform: translate(-70px) scale(7.5);
+      }
+  }
+
+  #smalldot{
+      margin-top:2%;
+  }
+
+  #loadmore:hover #smalldot{
+    margin-right:-10%;
+  overflow: inherit;
+  position: absolute;
+       animation: anim1 0.3s linear;
+       animation-fill-mode: forwards;
+       border:1px solid blue;
+    animation-iteration-count: 1;
+  }
+  #loadmore:hover::after {
+ border:1px solid blue;
+  }
+      .logo{
+          font-family:cursive;
+        
+   
+      }
+
+        
+@keyframes move {
+  100% {
+    margin-right:53%;margin-top:1%
+  }
+}
+@keyframes move1 {
+  100% {
+    margin-right:53%;margin-top:1%
+  }
+}
+   
+@keyframes move2 {
+  100% {
+    margin-right:53%;margin-top:1%
+  }
+}
+   
+@keyframes move3 {
+  100% {
+    margin-right:53%;margin-top:1%
+  }
+}
+.fa{
+display: none;
+}
+
+.featured-article , .more{
+       height:225px;
+       width:400px;
+       overflow: hidden;
+    } 
+    #image-link{      
+        margin-left:80px;
+        margin-top:-150px;
+        color:BLACK;
+         font-size:30px;
+}
+a:link{
+    text-decoration:none;
+}
+.overlay{
+    visibility: hidden; 
+}
+.image #image-link{ 
+  position:relative;
+  overflow: hidden;
+}
+.image img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+.image :hover  img{
+-webkit-transform: translate3d(0,-10%,0);
+	transform: translate3d(0,-10%,0);
+    box-shadow: 0 0 15px black;
+}
+.image :hover #image-link{
+    -webkit-transform: translate3d(0,-100%,0);
+	transform: translate3d(0,-100%,0);
+}
+
+.image :hover .overlay{
+    visibility:visible;
+}
+.image #image-link {
+    display: inline-block;
+    text-decoration: none; 
+    text-transform: uppercase;
+	color: #fff;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;	
+}
+
+
+/*Bouncein animation*/
+
+
+.block {
+  height: 5em;
+
+  width: 100%;
+  height:400px;
+  background: rgb(224, 52, 52);
+  color: #fff;
+
+  font-size:250%;
+  text-align: center;
+
+  text-shadow: 0 0 1px #333; /* so one can see fadeBgColor properly */
+}
+
+.animatable {
+  
+  /* initially hide animatable objects */
+  visibility: hidden;
+  
+  /* initially pause animatable objects their animations */
+  -webkit-animation-play-state: paused;   
+  -moz-animation-play-state: paused;     
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;   
+  animation-play-state: paused; 
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+  
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+	50% {
+		-webkit-transform: scale(1.05);
+	}
+
+	70% {
+		-webkit-transform: scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+
+	50% {
+		-moz-transform: scale(1.05);
+	}
+
+	70% {
+		-moz-transform: scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: scale(1);
+	}
+}
+
+@-o-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+
+	50% {
+		-o-transform: scale(1.05);
+	}
+
+	70% {
+		-o-transform: scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(.9);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.animated.bounceIn {
+	-webkit-animation-name: bounceIn;
+	-moz-animation-name: bounceIn;
+	-o-animation-name: bounceIn;
+	animation-name: bounceIn;
+}
+
+.bottom {
+    position:relative;
+    z-index:40;
+  background: #9e978e;
+
+margin-top:-67%;
+margin-left:80%;
+color:black;
+height: 180px;
+  width: 360px;
+  border-bottom-left-radius: 360px;
+  border-bottom-right-radius: 360px;
+  opacity:0.5;
+}
+
+        </style>
+
+
+<script>
+
+        // Trigger CSS animations on scroll.
+    // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+    
+    // Looking for a version that also reverses the animation when
+    // elements scroll below the fold again?
+    // --> Check https://codepen.io/bramus/pen/vKpjNP
+    
+    jQuery(function($) {
+      
+      // Function which adds the 'animated' class to any '.animatable' in view
+      var doAnimations = function() {
+        
+        // Calc current offset and get all animatables
+        var offset = $(window).scrollTop() + $(window).height(),
+            $animatables = $('.animatable');
+        
+        // Unbind scroll handler if we have no animatables
+        if ($animatables.length == 0) {
+          $(window).off('scroll', doAnimations);
+        }
+        
+        // Check all animatables and animate them if necessary
+            $animatables.each(function(i) {
+           var $animatable = $(this);
+                if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+            $animatable.removeClass('animatable').addClass('animated');
+                }
+        });
+    
+        };
+      
+      // Hook doAnimations on scroll, and trigger a scroll
+        $(window).on('scroll', doAnimations);
+      $(window).trigger('scroll');
+    
+    });
+    </script>
+
+<script>$(document)
+        .mousemove(function(e) {
+          $('.cursor')
+            .eq(0)
+            .css({
+              left: e.pageX,
+              top: e.pageY
+            });
+          setTimeout(function() {
+            $('.cursor')
+              .eq(1)
+              .css({
+                left: e.pageX,
+                top: e.pageY
+              });
+          }, 100);
+        })
+
+</script>
+<style>* {
+        cursor: none;
+      }
+      .cursor {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border:1px solid grey;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 99999;
+        pointer-events:none;
+      }
+  
+     
+        
+</style>
+
+<style>
+        @keyframes rotc {
+	from {
+		transform: rotate(0deg)
+		           translateX(290px)
+                   translateY(310px)
+		           rotate(0deg);
+                   width:0px;height:0px;
+	}
+	to {
+		transform: rotate(120deg)
+		           translate(140px) 
+                  
+		           rotate(120deg);
+                   width:90px;height:90px;
+	}
+}
+@keyframes rotc2 {
+	
+	from {
+		transform: rotate(30deg)
+		           translateX(240px) 
+                   translateY(180px)
+                  
+		           rotate(0deg);
+                   width:90px;height:90px;
+	}
+    to {
+		transform: rotate(-100deg)
+		           translateX(10px)
+                   translateY(00px)
+		           rotate(-90deg);
+                   width:0px;height:0px;
+	}
+}
+
+.circle {
+    background:white;
+    width:280px;
+    height:280px;
+    border-radius: 50%;
+   margin-top:10px;
+   margin-left:5%;
+   background-size: 100%;
+  
+   
+}
+.circle-small {
+    background:rgb(209, 43, 43);
+    width: 0px;
+    height: 0px;
+    border-radius:50%;
+  margin-left:30px;
+  z-index:1;
+  position: absolute;
+   
+}
+.circle:hover .circle-small{
+   
+    animation:rotc 1s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0.3s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+ 
+}
+.circle:hover{
+    width:390px;
+    height:390px;
+    transition-delay: 0.5s ease;
+}
+
+
+ .circle-small{
+    animation: rotc2 1s forwards;
+}
+
+
+.hide{
+    opacity:1;
+    top:80%;
+    left:-25px;
+    z-index:2;
+    color:black;
+    position: relative;
+ 
+}
+
+.hidetext{
+    opacity:0;
+    top:40%;
+    left:-25px;
+    z-index:2;
+    color:white;
+    position: relative;
+}
+.circle:hover .hidetext{
+    opacity:1;
+    transition-delay:1.5s;
+    
+}
+
+    </style>
+     <style>
+        #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)
+}
+
+#earth1{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background-color: white;
+ 
+}
+            #earth {
+      /* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
+      position: relative;
+    
+      /* [2] Set-up the dimensions and spacing */
+      width: 300px;
+      height: 300px;
+      position:fixed;
+    z-index:9999;
+  
+      margin: 10em 35em;
+      border: 3px solid grey;
+    
+      /* [3] Prepare the animation effects */
+      transition: transform 200ms linear;
+      animation: rotate 4s linear infinite; /* This is going to be defined in the next step */
+    
+      /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
+      color: #000;
+      border-radius: 50%;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABL1BMVEX/Qzf////+RDf8///9//3+Qzr5Oy7/RTHtrqjzqqX8Oi3/Qjj//f//+//9RDj/QzP///j3//////b7RjX/Pjn7RjH8/f/5//z+Qzn/PTb5Rjf6xL78RDz/+P//QT7/Qi//+PP2STLlQi/5ybj//+3mTUb/9fL5//X95+X0QTztysT3SiryRjflkYj1RS//PkPnQD7sODvjRzbpPTrgRDHdRjP0YFX7w6/7vsL2cmn3j4L6xbv+sqbxTUTsVEf8vrrjYVf94MvneGrifXH729/uSErhS1DdPz7ytbbmsqj/0c/vkJDgWl7ppKT74djvjn3mamr2gID0ZGDyn53spJb90777/uT97dbeUFD1mZH53dXgd3f1fnPmZVr2jYz6QE76y9Hlm5HmYGnzm6L3gorHAkwvAAAO9ElEQVR4nO2cDXvTOLbHLdmK28q2bEuOY9WxE9q8mIa0aWa4QFtaYAJMgA6Uzi2UhRl29vt/hj1KadK9G9LMXfPMLVc/hj4849TSX+fovMhuDUOj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0mmXBf/pCGYPii7/fBkpS4jHGcGIYiRASs+klz2O5zYw0E0kipRBGhK9cUt8p4Wua1gxDqC/Xj0U97FFQ40VYUJtmPGIeobzZjOxIwjgGlx7nLCGpwLwshawpU4/ZEa7xyDZIz5gplJJHUc56hHgVLlNB+UwhLEQtIzxnNIV/M5F6S42mLMUYl0pFBAptAxSyiCfM5ikxbJtT3IdpZMQrzaYsSkWWYE/QXjOKJBZkeutaQiWYlrPeLRAuPToblSqvpRSDkaOI5Tlj8+8+RyJLGEsFI7KJM4NRDxYoEdsC/MfgNksywUEmkcut2FIK5XBnMNh5NhgMdyvgNXRmjUQUPz4bDG/9sNParRHGvdklEMdBVSJvXfBDbxmnSodfeFbAOE0uwF9hlVhSPIPxB7s//jAcFCmJIsOT5W1Lfve/NtbX9/bW761v3BcRwymdXvIebOytr6+r6/sHCeNkegl2FLdtJh6uwHX41r3Du9dbsfIAxtlTd1x/kLOUM2pIGI0x70TN4XBvY2Pv3uFRAZp5eSbEvdGjTd/3Q9+Jw8OBBx4yvdTsPd4MEXJ8C4WbTzIjMqbXDPAuUJg9aSPAdcyfWksoXEUwkqVY2WIkAReVsGgRk639zdiCSYQw0sYInHdZp1+GbHs1NE1koiAIuk8zu59MLzHxrGsFpusEZhAfDpLmbFymommEt/ediULXfz68fqjKK6Q+7jgO+nnLzoRtwN5W7u4VrTEyzXodBdV488U2YUmJ2SnPXjZihALkuI77qWDRLOzbyeCVb5pwqV4F9bVophDD5FgkB8d+B7A6m7/0llC4iixYR7ij+TzPQSGD0OXVKOOGeNmOA8dVV63jl4VBy0uPbIv/NrYcK7B8x/U3djAjUxVgo9dt3wL/QdW48Uni2bCRkRIW9UZtVLWswHE236RKNp0/yFShFYYTL0Wv1kAhhDXOJRFGP8KD1c2OU49jq+6G+wWVnlfaTvRw8kvoxLHjWJbfeE2SacDEELFvja1OxzERXBxnV7d/DYId5iftiddZVuPF9lqzKbMM5/YChbAPLYQmCg3K4HaYg58akOTJ3eMObIcYFtPstrisGWVtRZoZ+VEbxbHrWLC8b9O1WUqQJO+/R3FYr4IOs32Cr4RwIiFpsfuNSZyJO417Qwi9IiPY/vrMlJdaptq4aGWNUDu9Uqp5xWnoOAEsgRk03mNZKy/YCBYN7/mx5SJwR+u8dcX/majwoy44DjJhOzZOK1cU1lRtwO9PQimCpe8eQdGTsIhskzmD/A+F1r8rNNLXxxbEIcuvOv6vQtLSbKgUbv8jBA8xrdhE4RNvduccrDS8BzYCE0O4fVTMJsQ8aYhMgkLHBOLYPxxCOmnyNPvfKWTJsz0wIpqEg/8epUmJlTjnYnTcgZtDvK76PxczhTYmhnxj1cG2VlB1Nu/PwuxEYSrVPoTI6LhW3H47tLeakvCvFzcLFRrFk00LltlCTrz5Pk3KizQRhOpiPzQniQ1Zx1cyt82lYbzrujFkExOc5+d0prDmgUJ+0LVgXSAfOmbcuLMLwZTlS+zDeQoZOTrz4TYQiQJ/o0hgCUuCY4q9xw21B9RkGy9m3gGxHBvD5zAtCJeQFI9b02wA5YhBPLs3hhmbplN3Uew31t9Bm5XMHeVahZjT4UYIDjFZsrNWiQqhS2P2wdhyYfEg3jjj3uWoNIu2qJAnPhQ8KPRN138wTeugENekXXmLTBBnOa4qGKz26mgw/PrMFin0MM3ehyqTwHq64RErz0tZBgp7fyBQGHRgm4ety1vTbQ6xJtk5d6CsCUPYbntXFBLsyXztQxuBQrVRXTeAbN1dedyrfG1uC23oUXESqryrbuX/rV9bXD38GYXQE9nJScM1YaZQN/l/CClhaEG9DBpVO6dvwbrIB09Fxx89g4o0S2xGVavOjOHYbXfiAEKgSv2Qcaz2+ENLRlCV16D/kJPeYRmFqqduhSrOgMe4aLWXfD0m/0lyL0sZG+6pgWOnGvjjwpMMY+h+aZoy206eNiZBSM3/fWEwkmVJNA2Yr7uduKp8C3bPRTxGjfO/FWtMyprHMTTreJq7Fyvk9u4xLBQoBDdd7yWl2TCiGYn66Ru4txUj1/QbHyEZQfwBE3kwjYju7H0pRJB1vgPiSEpnBzbylzCou1Ywua5UugiaoPGnnRRj6KcTQXrTs49rFObDMVKuoBTevnVNjfsn4BRK4Gby2xncGhRCabg/zFgEEpnNawJHtLjTgD0IPoycxuusr4ru2XEG691pWFXIpGBASP0TmdUAPOF+AbWEzcAVepex5zqFxW3niw3R7V1jmaOt5RRiIqI+3f7ZMlUYc6rmcQt0QSpksNsEeGztYdecKIRqY3UQQUdAZs1+AgtwFpuOqVy0CosUQzNZNeOw+3ZEWdRkQkyPXBYqlKBwHZrtS4W4vFjqeWAtlj5pxJO+BpmNDwVTyd5WCgkYoP9cpUuwoYvOW/C/EzKLAjQhvSePQtiGUNhBb2tC2AGxfsPy11spbvJE1Jb1UqXQVF6KnDIVGlJVuaw3PA7Bgmr90L0dZnspVV0ChdrFqHxo+1VV2Thu44lgXIjZHunjLOs9PN10rY5agjqUBkidiVjVINzbyQxu0OmHr1eIVHP1xUtLU5io0kz1gm/DTtVRvRvqHnkQMWtMnTCorpaNzsOqY0JN5fh7Q4qvCDSifpZR3v+43m74HVW/qbgKf6GKj8PDndS4cu55/T5EUy89YCUq5JN2lr7uxoFqEmOzcacCClMmYOogU3Lo3S4Umv5Zi9Rq3iyWYoPJHuSE3Q+/d33VgUzWyAzA5atmeDoUmC+ZD7/E0i8Ke+XF0skoHnyR5+pERmUMazxkUOrwCxvCB/jHdmB1LBfG9j+RCMLs1e9XBxEUF8PX+2ebcVBVVXgArQhsR//sMSczYyxSCOVhVPxkWpOkhNznfVb6cwyWf4Ygo7K+Y7bfrdkkmx07Rzu/I1BYN8Eu60XE5pUbjPPe0WoXWVW3rnotmGkdheu3snxqjYU2JLI/bINCpdF03vbL89KZwqOuaiGgpa02VrltkNlTCrt4oXIJzDow2x+ZpHPWl3hemm2PPp9BlwfdlDoXdZ1G9yhjeKlsAZ3MyYU+BwXozfxl/M+wi0PHjaFVMKvWoxYEwZnC3Gu1A0cNHwThKemxOS6UqK6cprtHK21QaIWqxnStxucs58sohN3qQW+h2lTHCcKTiJWW8WcK197UEQQb1WSHj0n/ylEQNB+HMF1IVlXTPx/JeadEHmfMjqCjHH7oggkvdq2J1gvGl6lpONROG75ZnSg0zw4YLi/STGXkrZ/ARspRzXCl6LNZNGOR8UKdVKh0jNof0jkCcbPJGOM9j9Liddf3YamqqhzvynypmoZz0TrzzUm6ctGvKcPl2xDC/opvBlA8w5/uuyi/kvY4a3Ud1X+rJV7tRXPWl6mnrJ4nBFvLXh6H6mDb96tmG0LG5VwX9ocs/RA2TEflUhd9Zt/ChimufGyrJTQtWP47eZ5NVxHa02IfpgvhQ9WtD7mYv8AUqh3lrVACosnZJ0KNfjQ9fVukkIjh4eQ0UR3duneh+C3fhplgt8bIClFs1avWxtrW7FyQpiR53IDCG+YM1dgv/TnPtD2AKm9Lvbz/7ncQ6Podx2lvRVm2lMK7x+CfkC7ijvPTAELpN7ChZMlnH+qmjuXU/UeJzC7HUB2kfTBGdd/yIdA13l7pgKfgi4MVzDNiN3eeQ26t+yEUspVoe4FCZss0g0RDksppiFTJhyy/8SrLv4VCEdnJxzMr8EPLdcPTmjc9NaPbYmsrfWE56qgPzPJ3sRV9/T6g0C7+gJm6KEROWy60oW17WSa4lLUfj6EHs9QI4dmRYN8i0ggeGYN1KC1Vh3f2sd+fDUFoFJGXXSsIVPzY2EkWPJwwCM7z4pWpPgt3Gle28IJ9qM59DDu38XC1Ad2XabpuEO4PCcalPiT9MrNmk2//w3dcKC2tjaLZv3KNMkaHe1BumtVqeGduxp8Bnf3gtoqloBCtVrYWZXxJary5lSfJyzYCdRaq163jj1AdyeibKIyyp+eo7tbr4QMRzfoHA1KjZ9QeQIPh1t3ju83Fh5k8Ek+P4ZN1aIjdF5Vo0TmNR2qyGbF0tB52YsvvxBB930pWg51fvkIBpQvZWQkh6YVn7zJmzPJhxInHjIdnEEzBvLcili3YJNSTxadNf9IJ+92nMscL8iH0x+COogVhBk0OSxEaj3hupGJOMPtP8WjCer2TX8fj8aPTHWKI7F8URqx3Oj6/Pf71yYGBFwU6QXrF/qNH52P16dOhN1upebGUQcJIspO98fj38QWvMxzB7izvnahLMBRcHpdpqzUaHBQioVdkqLdeuOHttka/7RwUmZALR5ckO2iNRoNiZzQqMDQpi2oaro6f5cHooPeF3V6aSF7mmwpTFZISD9usRqAogf+uriFVB9cUFNcSxhIh+KJYijkVqaDMttWrT/bWQoWc10TCmk3wHyjbCTHYGpNpDWxbKz9bYHVkpGI0Z5Ma898WEbaMqj4v9C6+kXp7zc6hiYV5z9qgeTYEH02geWYU/i29yQy82mRBy8/4357FHfD3gFZ489EKbz5a4c1HK7z5aIU3H63w5qMV3ny0wpuPVnjz0QpvPlrhzef/kcI5P/f0ffAvCmvfqcKGdcGKwLad3sSD+4WAQvfitX9/ZTu3WZF9bxIrq67rqgfDbrgquE1TUt6P4P0f4f6LO1+4L7j6TRPf4HWEvxZcqfB+v8+jXo9KKlJv0XPImw1WP+ch1G8c+atnUjL0Eth/+EY+Ar0OzDnHE0CtesX9u1OJL5FS/VYa2yDlv+r8F3Pppd7Fb4v4/myo0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDSa75x/AmpDiYrcVB0CAAAAAElFTkSuQmCC') 0 0 repeat / 630px;
+      /*box-shadow: inset 10px 0 20px 6px rgba(0, 0, 0, 1);*/
+      background-size: 100%;
+    
+      /* [5] Position things in a 3d space */
+      transform-style: preserve-3d;
+    }
+    
+    #earth:after {
+      /* [1] Break the flow to show this as an overlay */
+      position: absolute;
+      top: 0;
+      left: 0;
+    
+      /* [2] Make it take all the space available in the box (ahem... globe!) */
+      width: 100%;
+      height: 100%;
+    
+      /* [3] Make sure this has no generated content, as we want this just for fancy purposes */
+      content: '';
+    
+      /* [4] Give it some shape and shadow */
+      border-radius: 50%;
+      /*box-shadow: -10px 2px 10px 10px rgba(0,0,0,.9) inset;*/
+    }
+    
+    #earth:before {
+      /* [1] Again, break the flow to show this as an overlay */
+      position: absolute;
+      top: 0;
+      left: 0;
+    
+      /* [2] Again, give it all the available space */
+      width: 100%;
+      height: 100%;
+    
+      /* [3] Duh. */
+      content: '';
+    
+      /* [4] Add some shape and overlay effect to it */
+      opacity: .2;
+      border-radius: 50%;
+      background: radial-gradient(circle at 100px 100px, #fff, #000);
+    }
+    @keyframes rotate {
+      0% {background-position: 0 0;}
+      100% {background-position: 630px 0;}
+    }
+    
+            </style>
+
+<script>
+
+ 	/*	var body = document.getElementsByTagName('body')[0];
+			var removeLoading = function() {
+				// In a production application you would remove the loading class when your
+				// application is initialized and ready to go.  Here we just artificially wait
+				// 3 seconds before removing the class.
+				setTimeout(function() {
+					body.className = body.className.replace(/loading/, '');
+				}, 3000);
+			};
+			removeLoading();*/
+document.onreadystatechange = function () {
+    setTimeout(function(){    document.getElementById('mainclass').style.visibility="visible"; }, 2000);
+  var state = document.readyState
+  if (state == 'complete') {
+      setTimeout(function(){
+          document.getElementById('interactive');
+         document.getElementById('earth1').style.visibility="hidden";
+      },1000);
+  }
+}
+</script>
+    </head>
+
+    <body>
+          <div id="earth1">  <div id="earth"></div></div>
+
+
+            <div class='cursor'></div>
+
+          <div id="mainclass">
+        <!--  
+        If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
+        Slide effect: slide, fade
+        Text Align: slide_style_center, slide_style_left, slide_style_right
+        Add animation in text: https://daneden.github.io/animate.css/
+        
+        
+        --> <div class="header">
+                <div class="logo"><img src="logo.png"></div><span style="margin-top:60px;color:black;font-size: 18px;margin-left:2%;background-color:white;width:70px;">anticipate</span>
+                <div class="header-right">
+                   <div class="set"> <a href="index2.htm">Technology</a><button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+                   <div class="set"> <a href="ft.html">Future Thinking</a> <button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+                    <div class="set"> <a href="#">Search</a> <button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+                </div>
+            </div>
+
+        <div style="height:40%" width="40%" id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="2700" >
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+                <li data-target="#bootstrap-touch-slider" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper For Slides -->
+            <div   style="height:580px" width="40%" class="carousel-inner" role="listbox">
+
+                <!-- Third Slide -->
+                <div class="item active">
+
+                    <!-- Slide Background -->
+                    <img src="1gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+              
+                    
+                    <div class="bs-slider-overlay"></div>
+
+                    <div class="container">
+                        <div class="row">
+                                <div data-animation="animated rotateInDownRight" class="bottom"></div>
+                                <div style="margin-right:53%;height:55%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated rotateInDownRight" class="slide-text slide_style_center">
+                            
+                                        <br/><br/>
+                                         <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                                         <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                                         <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                                        <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                                   
+                                 </div>
+                            <!-- Slide Text Layer 
+                            <div class="slide-text  slide_style_left">
+                                <h1 data-animation="animated zoomInRight">Bootstrap Carousel</h1>
+                                <p data-animation="animated fadeInLeft">Bootstrap carousel now touch enable slide.</p>
+                                <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                                <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Slide -->
+
+                <!-- Second Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="2gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                
+ 
+                    <div class="bs-slider-overlay"></div>
+                    <!-- Slide Text Layer -->
+                   
+                    <div class="container">
+                            <div class="row">
+                                    <div  data-animation="animated rotateInDownRight" class="bottom"></div>
+                    <div style="margin-right:53%;height:55%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated  rotateInDownRight" class="slide-text slide_style_center">
+                            
+                       <br/><br/>
+                        <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                        <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                        <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="readmore.html" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                       <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- End of Slide -->
+
+                <!-- Third Slide -->
+                <div class="item">
+
+                    <!-- Slide Background -->
+                    <img src="traffic.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                    <div class="bs-slider-overlay"></div>
+                      
+                    <div class="container">
+                            <div class="row">
+                                    <div  data-animation="animated rotateInDownRight" class="bottom"></div>
+                    <div style="margin-right:53%;height:55%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                            
+                            <br/><br/>
+                             <h3 style="color:black" data-animation="animated flipInX">The most disruptive technology that will hit our industry</h3>
+                             <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                             <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                            <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                       
+                     </div>
+                    <!-- Slide Text Layer 
+                    <div class="slide-text slide_style_right">
+                        <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
+                        <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                        <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                        <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                    </div>-->
+                </div>
+                </div>
+            </div>
+                <div class="item">
+
+                        <!-- Slide Background -->
+                        <img src="4gif.gif" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                        <div class="bs-slider-overlay"></div>
+                        <div class="container">
+                                <div class="row">
+                                        <div  data-animation="animated rotateInDownRight" class="bottom"></div>
+                        <div style="margin-right:53%;height:55%;width:35%;color:black;border-radius:50%;background-color: white" data-animation="animated bounceInDown rotateInDownRight" class="slide-text slide_style_center">
+                                
+                                <br/><br/>
+                                 <h3 style="color:black" data-animation="animated flipInX">The  disruptive technology that will hit our industry</h3>
+                                 <p  style="color:rgb(71, 70, 70)" data-animation="animated lightSpeedIn">Article by laith haboubi</p>
+                                 <a style="margin-bottom:-55%;font-size:100%;text-align:center;margin-right:-80%;height:30%;width:35%;color:white;border-radius:50%;background-color:rgb(219, 49, 49)"  href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">Read <br/>more</a>
+                                <!-- <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>-->
+                           
+                         </div>
+                        <!-- Slide Text Layer 
+                        <div class="slide-text slide_style_right">
+                            <h1 data-animation="animated zoomInLeft">Beautiful Animations</h1>
+                            <p data-animation="animated fadeInRight">Lots of css3 Animations to make slide beautiful .</p>
+                            <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
+                            <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
+                        </div>-->
+                    </div>
+                <!-- End of Slide -->
+            </div>
+        </div>
+
+            </div><!-- End of Wrapper For Slides -->
+
+            <!-- Left Control -->
+            <a style="  -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(270deg); margin-left:6%;margin-top:10%;" class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                <span style="display:block;font-size:40px;" class="fa fa-angle-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <!-- Right Control -->
+            <a  style="  -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(270deg);float:left; margin-top:5%; margin-left:6% " class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                <span  style="display:block;font-size:40px;"  class="fa fa-angle-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div> <!-- End  bootstrap-touch-slider Slider -->
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+        
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main JS File -->
+        <script src="bootstrap-touch-slider.js"></script>
+        
+        <script type="text/javascript">
+            $('#bootstrap-touch-slider').bsTouchSlider();
+        </script>
+
+          
+    <div class="wrapper">
+    
+            <div class="block animatable bounceIn"><br/><br/>If your city was the only city that couldn’t accommodate seamless<br/> transport, or prevented you from optimising<br/>
+                    your workspace or gave you no access to green space –<br/>
+                    would you stay?<br/></div>
+         
+            
+          
+            
+            
+          </div>
+<center><iframe style="border:none;width:70%;height:500px;margin-top:-5%;position: relative" src="https://player.vimeo.com/video/347306091?autoplay=1&loop=1&muted=1"></iframe>
+</center><div class="row" id="article">
+        <div class="col-md-2" ></div>
+    <div class="col-md-4" >
+        
+        <div class="image">
+                <a class="info" href="#">    <img src="http://wsp-anticipate.com/wp-content/uploads/2019/07/jarrod-ballou-z9QGBkv7oAs-unsplash-650x650.jpg" width="100%"><p id="image-link">01<br>The Mega Malls of Data<br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+               
+        </div>
+        <div style="margin-top:-15%" class="image">
+                
+                <a class="info" href="#">  <img src="http://wsp-anticipate.com/wp-content/uploads/2019/07/scott-webb-BB0mMC8y0Pc-unsplash-650x650.jpg" width="100%"><p id="image-link">03<br>Is Zero-Carbon city a reality <br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="featured-article">
+            <p><h2>Featured Articles</h2>
+                    Can we help societies thrive in a world we do not control? Can we anticipate the unforeseeable, perceive the unexplainable, and plan something unbelievable?</p>
+        </div>
+        <div  style="margin-left:-6%"  class="image">
+      
+                <a class="info" href="#">  <img src="http://wsp-anticipate.com/wp-content/uploads/2019/07/juliana-malta-QmEos0q08TM-unsplash-1-650x650.jpg" width="100%" ><p id="image-link">02<br>Innovation: A risk Worth taking<br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+        </div>
+        <div class="more" style="margin-top:90px;margin-left:40px">
+            <div id="loadmore" class="loadmore" style="color:rgb(216, 19, 19);font-size:20px">Load more <div id="smalldot" class="smalldot" style="margin-top:-21px;margin-left:110px;width:15px;height:15px;border-radius: 50%;border:1px solid rgb(216, 19, 19)"></div></div>
+        </div>
+    </div>
+    <div class="col-md-2" ></div>
+</div>
+
+<center>
+    <h1>Related Articles</h1><br/><br/>
+<table style="margin-right:-5%" width="90%"   cellpadding="400px"  cellspacing="200px"><tr>
+        <td>  
+                <div class="circle" style="background-image: url('http://wsp-anticipate.com/wp-content/uploads/2019/07/meric-dagli-uVdOLNJpxA0-unsplash-500x500.jpg')">
+                      
+                        <div class="circle-small">
+                             
+                        </div>
+                        <span  class="hidetext"  >Future<br>Thinking</span>
+                      
+                    </div></td>     
+    <td>
+    <div class="circle" style="background-image:url('http://wsp-anticipate.com/wp-content/uploads/2019/07/annie-spratt-ezMwqvKHNEk-unsplash-500x500.jpg') ">
+      
+        <div class="circle-small">
+            
+        </div>
+        <p  class="hidetext"  >Technology</p>
+      
+    </div>
+</td><td>
+    <div class="circle" style="background-image: url('http://wsp-anticipate.com/wp-content/uploads/2019/07/johannes-schwaerzler-H1jf2rrg2BI-unsplash-500x500.jpg')">
+         
+            <div class="circle-small">
+                
+            </div>
+            <p class="hidetext" >Future<br>Thinking</p>
+          
+        </div>
+    </td>
+    </tr></table></center>
+
+    <div class="flex-container">
+            <div  id="future" style="position: relative;"><h2><strong>What is the future of ... </strong> </h2></div>
+            <div>
+             <input type="text" value="" class="line1">
+              <img   style="margin-right:-110%;margin-top:-7%;" src="img14.png" height="55px" width="67px" >
+             
+            </div>
+          </div>
+
+          
+          </div>
+      <div class="rowfoot_image"> 
+              <div class="col-md-4">
+                
+              <form class="w3-container">
+                  <p>
+                  <label style="font-size: 24px; padding-left: 5px;">Don't miss out on insights ...</label>
+                  <br>
+                  <input class="line2" type="text" placeholder="Email Address">
+                </p>                    
+              </form>
+              <div class="g-recaptcha" data-sitekey="6Ld6_7EUAAAAACSOD-dCSDrzkzxrV0l3IE8Y7zZe" style="padding-left: 60px;" required></div>
+              <span id="captcha" style="color:red" required></span> <!-- this will show captcha errors --><br>
+             <p style="padding-left: 60px;"><input type="checkbox"  required>WSP may contact me via email</input></p>
+             <p style="padding-left: 60px;"><button class="button1 button4" id="line3" >Subscribe</button>
+              <img   style="margin-right:10%; " src="img20.png" height="20px" width="20px">
+            </p> 
+            </p>
+            </div>
+              <div class="col-sm-2"  style="padding-top: 30px;">
+                          <p style="font-size: 24px;">Sectors</p>
+                          <p class="hoverit">Technology</p>
+                          <p class="hoverit">Future Thinking</p>
+              </div>
+              <div class="col-sm-4" id="support" style="padding-top: 30px;"> 
+                  <p style="font-size: 24px;">Support</p>
+                  <p class="hoverit">Privacy Policy</p>
+                  <p class="hoverit">Terms & Conditions</p>
+              </div>
+
+              <div class="col-sm-2"  style="padding-top: 150px;">
+                
+                <div class="rowfoot">
+                  <div class="col-sm-4"><img src="img16.png" height="20px" width="20px" class="new_image"></div>
+                  <div class="col-sm-4"><img src="img17.png" height="20px" width="20px" class="new_image"></div>
+                  <div class="col-sm-4"><img src="img18.png" height="20px" width="20px" class="new_image"></div>
+                  <p class="module"></p>
+              </div>
+              </div>  
+      </div>
+    </div>
+   </body>
+
+</html>
+
+<!-- End -->

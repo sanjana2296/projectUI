@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head><style>
+@keyframes rot {
+	from {
+		transform: rotate(0deg)
+		           translate(120px)
+		           rotate(0deg);
+                   width:40px;height:40px;
+	}
+	to {
+		transform: rotate(80deg)
+		           translate(100px) 
+		           rotate(80deg);
+                   width:60px;height:60px;
+	}
+}
+
+
+.smile {
+	width: 1px;
+	height: 1px;
+    border-radius:50%; 
+    background-color:red;
+	position: absolute;
+	top: 130px;
+	left: 48%;
+	margin: -20px;
+
+	animation: rot 0.7s  linear;
+    animation-iteration-count: 1;
+}
+.fixcircle{
+	height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-image: url('http://wsp-anticipate.com/wp-content/uploads/2019/07/meric-dagli-uVdOLNJpxA0-unsplash-500x500.jpg');
+    border: 1px solid black;
+   
+    position: absolute;
+	top: 80px;
+	left: 47%;}
+
+    .fixcircle:hover {
+        width: 1px;
+	height: 1px;
+    border-radius:50%; 
+    color:red;
+	position: absolute;
+	top: 130px;
+	left: 48%;
+	margin: -20px;
+animation-fill-mode: forwards;
+animation-play-state: paused;
+	animation: rot 0.7s  linear;
+    }
+  
+
+</style></head>
+<body>
+  <div class="fixcircle"></div>      <div class="smile"></div>
+</body>
+</html>

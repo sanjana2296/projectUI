@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Bootstrap Touch slider</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all">
+
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+       
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <style>
+        body{
+            font-family: 'Styrene A';
+            letter-spacing: 1.5px;
+
+        }
+    .header{
+        margin-top: 30px;
+
+        overflow: hidden;
+        height:100px;
+        padding: 30px 30px;
+
+       }
+        .logo{
+            margin-top:-30px;
+            margin-right:-35px;
+           float:left;
+           
+           }
+
+
+    .header-right{
+        float: right;
+        align-items: center;
+        word-spacing: 1.5px;
+        
+     
+        margin-right: 40px;
+ 
+    }
+    .logo img{
+        width:120px;
+        height:60px;
+        align-content: center;
+        margin-left: 190px;
+
+    }
+    .header a{
+        text-decoration: none;
+        color:black;
+        text-align: center;
+        font-size:20px;
+
+padding: 12px;}
+
+.button{
+background-color: white;
+border:1px solid black;
+height:15px;
+width: 15px;
+position: absolute;
+margin-top:10px;
+text-align: center;
+text-decoration: none;
+align-content: center;
+margin-right:-5%;
+border-radius: 50%;
+
+}
+@keyframes anim{
+0%{transform: translate(0px) scale(1.5) ;}
+100%{
+  transform: translate(13px) scale(1.5);
+}
+}
+/*@keyframes anim{
+0%{left:0px;scale: 1.5;}
+100%{left:15px;}
+}*/
+.set{
+border-spacing: 1px;
+display: inline;
+}
+
+.button:hover::after{
+/*   content: '\00bb';*/
+color: black;
+align-content: center;
+transition-property: all;
+}
+
+.button:hover {
+
+margin-right:-10%;
+text-decoration: none;
+animation: anim 0.3s linear;
+animation-fill-mode: forwards;
+/* content: '\00bb';*/
+color: black;
+animation-iteration-count: 1;
+}
+.button:hover .fa{
+display: block;
+
+}
+
+@keyframes anim1{
+0%{transform: translate(0px) scale(1.5) ;}
+100%{
+  transform: translate(-70px) scale(7.5);
+}
+}
+
+#smalldot{
+margin-top:2%;
+}
+
+#loadmore:hover #smalldot{
+margin-right:-10%;
+overflow: inherit;
+position: absolute;
+animation: anim1 0.3s linear;
+animation-fill-mode: forwards;
+border:1px solid blue;
+animation-iteration-count: 1;
+}
+#loadmore:hover::after {
+border:1px solid blue;
+}
+.logo{
+  font-family:cursive;
+
+
+}
+
+
+
+}
+.fa{
+display: none;
+}
+
+.featured-article , .more{
+height:225px;
+width:400px;
+overflow: hidden;
+} 
+#image-link{      
+margin-left:80px;
+margin-top:-150px;
+color:BLACK;
+ font-size:30px;
+}
+a:link{
+text-decoration:none;
+}
+.overlay{
+visibility: hidden; 
+}
+.image #image-link{ 
+position:relative;
+overflow: hidden;
+}
+.image img {
+display: block;
+position: relative;
+-webkit-transition: -webkit-transform 0.35s;
+transition: transform 0.35s;
+}
+.image :hover  img{
+-webkit-transform: translate3d(0,-10%,0);
+transform: translate3d(0,-10%,0);
+box-shadow: 0 0 15px black;
+}
+.image :hover #image-link{
+-webkit-transform: translate3d(0,-100%,0);
+transform: translate3d(0,-100%,0);
+}
+
+.image :hover .overlay{
+visibility:visible;
+}
+.image #image-link {
+display: inline-block;
+text-decoration: none; 
+text-transform: uppercase;
+color: #fff;
+-webkit-transition: -webkit-transform 0.35s;
+transition: transform 0.35s;	
+}
+
+
+/*Bouncein animation*/
+
+
+.block {
+height: 5em;
+
+width: 100%;
+height:400px;
+background: rgb(224, 52, 52);
+color: #fff;
+
+font-size:250%;
+text-align: center;
+
+text-shadow: 0 0 1px #333; /* so one can see fadeBgColor properly */
+}
+
+.animatable {
+
+/* initially hide animatable objects */
+visibility: hidden;
+
+/* initially pause animatable objects their animations */
+-webkit-animation-play-state: paused;   
+-moz-animation-play-state: paused;     
+-ms-animation-play-state: paused;
+-o-animation-play-state: paused;   
+animation-play-state: paused; 
+}
+
+/* show objects being animated */
+.animated {
+visibility: visible;
+
+-webkit-animation-fill-mode: both;
+-moz-animation-fill-mode: both;
+-ms-animation-fill-mode: both;
+-o-animation-fill-mode: both;
+animation-fill-mode: both;
+
+-webkit-animation-duration: 1s;
+-moz-animation-duration: 1s;
+-ms-animation-duration: 1s;
+-o-animation-duration: 1s;
+animation-duration: 1s;
+
+-webkit-animation-play-state: running;
+-moz-animation-play-state: running;
+-ms-animation-play-state: running;
+-o-animation-play-state: running;
+animation-play-state: running;
+}
+
+
+@-webkit-keyframes bounceIn {
+0% {
+opacity: 0;
+-webkit-transform: scale(.3);
+}
+50% {
+-webkit-transform: scale(1.05);
+}
+
+70% {
+-webkit-transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+-webkit-transform: scale(1);
+}
+}
+
+@-moz-keyframes bounceIn {
+0% {
+opacity: 0;
+-moz-transform: scale(.3);
+}
+
+50% {
+-moz-transform: scale(1.05);
+}
+
+70% {
+-moz-transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+-moz-transform: scale(1);
+}
+}
+
+@-o-keyframes bounceIn {
+0% {
+opacity: 0;
+-o-transform: scale(.3);
+}
+
+50% {
+-o-transform: scale(1.05);
+}
+
+70% {
+-o-transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+-o-transform: scale(1);
+}
+}
+
+@keyframes bounceIn {
+0% {
+opacity: 0;
+transform: scale(.3);
+}
+
+50% {
+transform: scale(1.05);
+}
+
+70% {
+transform: scale(.9);
+}
+
+100% {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+.animated.bounceIn {
+-webkit-animation-name: bounceIn;
+-moz-animation-name: bounceIn;
+-o-animation-name: bounceIn;
+animation-name: bounceIn;
+}
+
+.bottom {
+position:relative;
+z-index:40;
+background: #9e978e;
+
+margin-top:-67%;
+margin-left:80%;
+color:black;
+height: 180px;
+width: 360px;
+border-bottom-left-radius: 360px;
+border-bottom-right-radius: 360px;
+opacity:0.5;
+}
+
+</style>
+
+
+<script>
+
+// Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+// Looking for a version that also reverses the animation when
+// elements scroll below the fold again?
+// --> Check https://codepen.io/bramus/pen/vKpjNP
+
+jQuery(function($) {
+
+// Function which adds the 'animated' class to any '.animatable' in view
+var doAnimations = function() {
+
+// Calc current offset and get all animatables
+var offset = $(window).scrollTop() + $(window).height(),
+    $animatables = $('.animatable');
+
+// Unbind scroll handler if we have no animatables
+if ($animatables.length == 0) {
+  $(window).off('scroll', doAnimations);
+}
+
+// Check all animatables and animate them if necessary
+    $animatables.each(function(i) {
+   var $animatable = $(this);
+        if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+    $animatable.removeClass('animatable').addClass('animated');
+        }
+});
+
+};
+
+// Hook doAnimations on scroll, and trigger a scroll
+$(window).on('scroll', doAnimations);
+$(window).trigger('scroll');
+
+});
+</script>
+
+<script>$(document)
+.mousemove(function(e) {
+  $('.cursor')
+    .eq(0)
+    .css({
+      left: e.pageX,
+      top: e.pageY
+    });
+  setTimeout(function() {
+    $('.cursor')
+      .eq(1)
+      .css({
+        left: e.pageX,
+        top: e.pageY
+      });
+  }, 100);
+})
+
+</script>
+<style>* {
+cursor: none;
+}
+.cursor {
+position: absolute;
+height: 30px;
+width: 30px;
+border:1px solid grey;
+border-radius: 50%;
+transform: translateX(-50%) translateY(-50%);
+z-index: 99999;
+pointer-events:none;
+}
+
+
+
+</style>
+
+<style>
+@keyframes rotc {
+from {
+transform: rotate(0deg)
+           translateX(290px)
+           translateY(310px)
+           rotate(0deg);
+           width:0px;height:0px;
+}
+to {
+transform: rotate(120deg)
+           translate(140px) 
+          
+           rotate(120deg);
+           width:90px;height:90px;
+}
+}
+@keyframes rotc2 {
+
+from {
+transform: rotate(30deg)
+           translateX(240px) 
+           translateY(180px)
+          
+           rotate(0deg);
+           width:90px;height:90px;
+}
+to {
+transform: rotate(-100deg)
+           translateX(10px)
+           translateY(00px)
+           rotate(-90deg);
+           width:0px;height:0px;
+}
+}
+
+.circle {
+background:white;
+width:280px;
+height:280px;
+border-radius: 50%;
+margin-top:10px;
+margin-left:5%;
+background-size: 100%;
+
+
+}
+.circle-small {
+background:rgb(209, 43, 43);
+width: 0px;
+height: 0px;
+border-radius:50%;
+margin-left:30px;
+z-index:1;
+position: absolute;
+
+}
+.circle:hover .circle-small{
+
+animation:rotc 1s forwards;
+animation-iteration-count: 1;
+animation-delay: 0.7s;
+
+}
+.circle:hover{
+width:390px;
+height:390px;
+transition-delay: 0.5s ease;
+}
+
+
+.circle-small{
+animation: rotc2 1s forwards;
+}
+
+
+.hide{
+opacity:1;
+top:80%;
+left:-25px;
+z-index:2;
+color:black;
+position: relative;
+
+}
+
+.hidetext{
+opacity:0;
+top:40%;
+left:-25px;
+z-index:2;
+color:white;
+position: relative;
+}
+.circle:hover .hidetext{
+opacity:1;
+transition-delay:1.5s;
+
+}
+.flex-container {
+        display: flex;
+        align-items: center; /* Use another value to see the result */
+        width: 100%;
+        min-height: 300px;
+        background-color:rgb(248, 248, 248);
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+      #future{
+        display: inline-block; 
+        position:relative; 
+        left:500px; 
+        padding-top:5px; 
+        font-size: 20px;
+      }
+      #textbox{
+        display: inline-block; 
+        position:relative; 
+        left:500px; 
+        padding-top:8px; 
+        
+      }
+
+.line1{ 
+        padding-top:100px;  
+        display:inline-flex;
+        border:none;
+        padding-left: 350px;
+        padding-right: 100px;
+        border-bottom:2px solid black;
+        width:100%;
+        background-color: rgb(248, 248, 248);
+}
+
+.line2{ 
+        padding-top:10px;  
+        display:initial;
+        border:none;
+        padding-left: 50px;
+        
+        border-bottom:1px solid grey;
+        width:80%;
+      
+}
+
+#line3{ 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding-top:10px;  
+        display:inline-flex;
+        border:none;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom:0.5px solid black;
+        width:50%;
+        background-color: white;
+}
+
+
+.w3-container,.w3-panel{
+  padding-top:30px;
+  padding-left: 60px;
+  }
+  
+/*
+
+.w3-blue,.w3-hover-blue:hover{color:#fff!important;
+background-color:#2196F3!important}
+*/
+
+.row_image {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+#id{
+  padding-left: 0px;
+}
+
+.hoverit:hover{
+  color: red;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button4 {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.module {
+  cursor: url('img21.png'), auto;	
+}
+
+* {
+                cursor: none;
+         }
+         
+         
+.new_image{
+    border:none;
+}
+.new_image:hover{
+    border: 1px solid grey;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+    <div class='cursor'></div>
+
+  
+<!--  
+If you want to change #bootstrap-touch-slider id then you have to change Carousel-indicators and Carousel-Control  #bootstrap-touch-slider slide as well
+Slide effect: slide, fade
+Text Align: slide_style_center, slide_style_left, slide_style_right
+Add animation in text: https://daneden.github.io/animate.css/
+
+
+--> <div class="header">
+        <div class="logo"><img src="logo.png"></div><span style="margin-top:60px;color:black;font-size: 18px;margin-left:2%;background-color:white;width:70px;">anticipate</span>
+        <div class="header-right">
+           <div class="set"> <a href="index2.html">Technology</a><button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+           <div class="set"> <a href="ft.html">Future Thinking</a> <button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+            <div class="set"> <a href="#">Search</a> <button class="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>&nbsp;&nbsp;&nbsp;</div>
+        </div>
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+
+<!-- Bootstrap bootstrap-touch-slider Slider Main JS File -->
+<script src="bootstrap-touch-slider.js"></script>
+
+<script type="text/javascript">
+    $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
+
+  
+
+<center><iframe style="border:none;width:70%;height:500px;margin-top:0%;position: relative" src="https://player.vimeo.com/video/347714391?autoplay=1&loop=1&muted=1"></iframe>
+</center>
+<div class="row" id="article" style="margin-top: 100px;">
+<div class="col-md-2" ></div>
+<div class="col-md-4" >
+
+<div class="image">
+        <a class="info" href="#">    <img src="http://wsp-anticipate.com/wp-content/uploads/2019/04/170515-RP-WSP-Stock-image-Abu-Dhabi-Skyline-650x650.jpg" width="100%"><p id="image-link">01<br>What's the worry with Desalination?<br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+       
+</div>
+<div style="margin-top:-15%" class="image">
+        
+        <a class="info" href="#">  <img src="http://wsp-anticipate.com/wp-content/uploads/2019/04/170515-RP-WSP-Stock-image-Construction-Worker-650x650.jpg" width="100%"><p id="image-link">03<br>Beyond the Blueprint <br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="featured-article">
+    <p><h2>Technology</h2>
+      By exploring, developing and harnessing the latest technologies, we can create disruptive, ground-breaking solutions to tomorrow’s problems.</p>
+</div>
+<div  style="margin-left:-6%"  class="image">
+
+        <a class="info" href="#">  <img src="http://wsp-anticipate.com/wp-content/uploads/2019/04/170515-RP-WSP-Stock-image-Facade-2-650x650.jpg" width="100%" style="filter: grayscale(0.6)" ><p id="image-link" >02<br><b>The futuristic world of smart grids</b><br><span class="overlay" style="font-size:50px">&#8594;</span></p></a>
+</div>
+<div class="more" style="margin-top:90px;margin-left:40px">
+    <div id="loadmore" class="loadmore" style="color:rgb(216, 19, 19);font-size:20px">Load more <div id="smalldot" class="smalldot" style="margin-top:-21px;margin-left:110px;width:15px;height:15px;border-radius: 50%;border:1px solid rgb(216, 19, 19)"></div></div>
+</div>
+</div>
+<div class="col-md-2" ></div>
+</div>
+
+<br/>
+
+
+
+<!---footer-->
+
+<div class="flex-container">
+  <div  id="future" style="position: relative;"><h2><strong>What is the future of ... </strong> </h2></div>
+  <div>
+   <input type="text" value="" class="line1">
+    <img   style="margin-right:-110%;margin-top:-7%;" src="img14.png" height="55px" width="67px" >
+   
+  </div>
+</div>
+
+
+</div>
+<div class="row_image"> 
+    <div class="col-md-4">
+      
+    <form class="w3-container">
+        <p>
+        <label style="font-size: 24px; padding-left: 5px;">Don't miss out on insights ...</label>
+        <br>
+        <input class="line2" type="text" placeholder="Email Address">
+      </p>                    
+    </form>
+    <div class="g-recaptcha" data-sitekey="6Ld6_7EUAAAAACSOD-dCSDrzkzxrV0l3IE8Y7zZe" style="padding-left: 60px;" required></div>
+    <span id="captcha" style="color:red" required></span> <!-- this will show captcha errors --><br>
+   <p style="padding-left: 60px;"><input type="checkbox"  required>WSP may contact me via email</input></p>
+   <p style="padding-left: 60px;"><button class="button1 button4" id="line3" >Subscribe</button>
+    <img   style="margin-right:10%; " src="img20.png" height="20px" width="20px">
+  </p> 
+  </p>
+  </div>
+    <div class="col-sm-2"  style="padding-top: 30px;">
+                <p style="font-size: 24px;">Sectors</p>
+                <p class="hoverit">Technology</p>
+                <p class="hoverit">Future Thinking</p>
+    </div>
+    <div class="col-sm-4" id="support" style="padding-top: 30px;"> 
+        <p style="font-size: 24px;">Support</p>
+        <p class="hoverit">Privacy Policy</p>
+        <p class="hoverit">Terms & Conditions</p>
+    </div>
+
+    <div class="col-sm-2"  style="padding-top: 150px;">
+      
+      <div class="row">
+        <div class="col-sm-4"><img src="img16.png" height="20px" width="20px" class="new_image"></div>
+        <div class="col-sm-4"><img src="img17.png" height="20px" width="20px" class="new_image"></div>
+        <div class="col-sm-4"><img src="img18.png" height="20px" width="20px" class="new_image"></div>
+        <p class="module"></p>
+    </div>
+    </div>  
+</div>
+<?php 
+include 'index.php';
+?>
+
+</body>
+
+</html>
+
+<!-- End -->
